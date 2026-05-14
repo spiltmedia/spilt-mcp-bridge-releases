@@ -1,10 +1,10 @@
 {
-    "version": "2.0.8",
-    "download_url": "https://github.com/spiltmedia/spilt-mcp-bridge-releases/releases/download/v2.0.8/spilt-mcp-bridge-2.0.8.zip",
+    "version": "2.0.10",
+    "download_url": "https://github.com/spiltmedia/spilt-mcp-bridge-releases/releases/download/v2.0.10/spilt-mcp-bridge-2.0.10.zip",
     "homepage": "https://spiltmedia.com",
     "requires": "5.6",
     "requires_php": "7.4",
     "tested": "6.9",
-    "last_updated": "2026-03-31",
-    "changelog": "<h4>v2.0.7 (2026-03-31)</h4><ul><li><strong>Fix:</strong> Added defined() guards on SPILT_MCP_VERSION and SPILT_MCP_PATH constants — prevents fatal error when WP_Upgrader re-activates the plugin in the same PHP process during self-update.</li></ul><h4>v2.0.6 (2026-03-31)</h4><ul><li><strong>Hotfix:</strong> Rebuilt release ZIP with forward-slash paths (Python zipfile). v2.0.5 ZIP used backslash separators from PowerShell Compress-Archive, breaking extraction on Linux hosts.</li></ul><h4>v2.0.5 (2026-03-31)</h4><ul><li><strong>New:</strong> POST /cache/litespeed/preset and POST /cache/litespeed/purge endpoints.</li></ul>"
+    "last_updated": "2026-04-24",
+    "changelog": "<h4>v2.0.10 (2026-04-24)</h4><ul><li><strong>Fix:</strong> 404 Monitor reader now auto-detects the hit-count column (`times_accessed` on Rank Math 1.0.x+, `hits` on older installs). Previously queried a non-existent `hits` column on modern installs, returning zeroes.</li><li><strong>Fix:</strong> Added `web-stories` and `llms-txt` to the known-module whitelist so enable/disable accepts them.</li><li><strong>Critical fix (v2.0.9):</strong> Rank Math redirections `sources` column is now written PHP-serialized (maybe_serialize) instead of JSON. JSON silently crashed class-table.php:189 and broke the redirect module. Read path is tolerant of both formats.</li><li><strong>New (v2.0.9):</strong> Rank Math modules management API — GET/POST /rankmath/modules, POST /rankmath/modules/enable, POST /rankmath/modules/disable.</li><li><strong>New (v2.0.9):</strong> Rank Math 404 Monitor reader — GET /rankmath/404-monitor, /stats, DELETE /{id}, POST /clear.</li><li><strong>Enhanced (v2.0.9):</strong> /health now reports rankmath_version, active modules, and presence of redirections + 404_logs tables.</li></ul><h4>v2.0.7 (2026-03-31)</h4><ul><li><strong>Fix:</strong> Added defined() guards on SPILT_MCP_VERSION and SPILT_MCP_PATH constants — prevents fatal error when WP_Upgrader re-activates the plugin in the same PHP process during self-update.</li></ul><h4>v2.0.6 (2026-03-31)</h4><ul><li><strong>Hotfix:</strong> Rebuilt release ZIP with forward-slash paths (Python zipfile). v2.0.5 ZIP used backslash separators from PowerShell Compress-Archive, breaking extraction on Linux hosts.</li></ul><h4>v2.0.5 (2026-03-31)</h4><ul><li><strong>New:</strong> POST /cache/litespeed/preset and POST /cache/litespeed/purge endpoints.</li></ul>"
 }
